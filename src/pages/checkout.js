@@ -13,7 +13,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import Head from "next/head";
 
-const stripePromise = loadStripe(process.env.stripe_public_key);
+const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
 
 function Checkout({ products }) {
   const [session] = useSession();
