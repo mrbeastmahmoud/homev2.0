@@ -26,7 +26,7 @@ function Checkout({ products }) {
 
     // Call the backend to create a session
     const checkoutSession = await axios.post("/api/create-checkout-session", {
-      items,
+      items: items,
       email: session.user.email,
     });
 

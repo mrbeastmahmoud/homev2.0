@@ -19,7 +19,7 @@ function Products({ products }) {
   return (
     <>
       <Head>
-        <title>All Products | Hmoe v2.0</title>
+        <title>All Products | Home v2.0</title>
       </Head>
       <Header
         products={products}
