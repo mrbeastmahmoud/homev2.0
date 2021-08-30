@@ -1,6 +1,6 @@
 import { getSession, useSession } from "next-auth/client";
 import Header from "../components/Header";
-import db from "../../firebase";
+
 import Order from "../components/Order";
 import Head from "next/head";
 import * as admin from "firebase-admin";
@@ -49,9 +49,7 @@ export async function getServerSideProps(context) {
         credential: admin.credential.cert(serviceAccount),
       })
     : admin.app();
-  if (db) {
-    console.log("NOT DEFINED");
-  }
+  
   const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
   const moment = require("moment");
 
